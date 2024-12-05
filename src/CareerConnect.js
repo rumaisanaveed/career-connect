@@ -414,7 +414,7 @@ export const CareerConnect = () => {
           </h1>
           <div className="flex items-center gap-2">
             {[Facebook, Instagram].map((icon, index) => (
-              <img src={icon} key={index} />
+              <img src={icon} key={index} alt={`icon-${index}`} />
             ))}
           </div>
         </div>
