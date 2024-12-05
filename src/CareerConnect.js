@@ -5,7 +5,13 @@ import Calendar from "./assets/icons/calendar.svg";
 import Location from "./assets/icons/location.svg";
 import AboutImage from "./assets/images/aboutImage.png";
 import { Button } from "./components/Button";
-import { sponsorData } from "./constants";
+import {
+  aboutData,
+  companiesData,
+  navItems,
+  sponsorData,
+  teamData,
+} from "./constants";
 import Facebook from "./assets/icons/facebook.svg";
 import Instagram from "./assets/icons/instagram.svg";
 
@@ -62,17 +68,15 @@ export const CareerConnect = () => {
           <img src={Logo} alt="logo" />
         </div>
         <div className="flex items-center gap-8">
-          {["Home", "About", "Companies", "Team", "Schedule", "Sponsors"].map(
-            (item, index) => (
-              <a
-                key={index}
-                href={`#${item.toLowerCase()}`}
-                className="text-white font-medium text-sm"
-              >
-                {item}
-              </a>
-            )
-          )}
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={`#${item.toLowerCase()}`}
+              className="text-white font-medium text-sm"
+            >
+              {item}
+            </a>
+          ))}
         </div>
         <Button to="#contact">Contact</Button>
       </nav>
@@ -157,14 +161,7 @@ export const CareerConnect = () => {
           <div className="text-black">
             <h2 className="font-semibold text-xl">Event Highlights</h2>
             <ul className="list-disc pl-8">
-              {[
-                "Keynote speeches and TED Talks",
-                "Panel discussions on Blockchain, Web3, and Game Development",
-                "Digital and tech stalls showcasing innovations",
-                "Recruitment drives and walk-in interviews",
-                "Coding hackathons and gaming competitions",
-                "Networking sessions with professionals, alumni, and sponsors",
-              ].map((text, index) => (
+              {aboutData.map((text, index) => (
                 <li key={index} className="font-normal text-lg">
                   {text}
                 </li>
@@ -193,51 +190,7 @@ export const CareerConnect = () => {
           </Button>
         </article>
         <div className="flex flex-col gap-4">
-          {[
-            {
-              name: "Platinum",
-              companies: {
-                image1: "",
-                image2: "",
-              },
-            },
-            {
-              name: "Gold",
-              companies: {
-                image1: "",
-                image2: "",
-                image3: "",
-                image4: "",
-                image5: "",
-              },
-            },
-            {
-              name: "Silver",
-              companies: {
-                image1: "",
-                image2: "",
-                image3: "",
-                image4: "",
-                image5: "",
-                image6: "",
-                image7: "",
-                image8: "",
-              },
-            },
-            {
-              name: "Bronze",
-              companies: {
-                image1: "",
-                image2: "",
-                image3: "",
-                image4: "",
-                image5: "",
-                image6: "",
-                image7: "",
-                image8: "",
-              },
-            },
-          ].map(({ name, companies }, index) => (
+          {companiesData.map(({ name, companies }, index) => (
             <div key={index}>
               <h2 className="text-black font-semibold text-[32px]">{name}</h2>
               <div className="flex items-center gap-2">
@@ -267,101 +220,7 @@ export const CareerConnect = () => {
         </div>
         <div className="flex flex-col gap-6">
           <h1 className="font-bold text-4xl">Team Structure</h1>
-          {[
-            {
-              heading: "Faculty Advisors",
-              members: [
-                {
-                  name: "Prof. Sadiq Ali Khan",
-                  desgination: "Head of Department",
-                  description:
-                    "Guiding the vision and execution of Career Connect 2024.",
-                },
-                {
-                  name: "Dr. S. M. Khalid Jamal",
-                  desgination: "Student Advisor",
-                  description:
-                    "Ensuring seamless collaboration between academia and industry.",
-                },
-                {
-                  name: "Dr. Humera Basheer",
-                  desgination: "Student Advisor",
-                  description:
-                    "Ensuring seamless collaboration between academia and industry.",
-                },
-              ],
-            },
-            {
-              heading: "Core Organizing Committee",
-              members: [
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-              ],
-            },
-            {
-              heading: "Volunteer Team",
-              members: [
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-                {
-                  name: "Name",
-                  desgination: "Designation",
-                  description: "Sample text",
-                },
-              ],
-            },
-          ].map(({ heading, members }, index) => (
+          {teamData.map(({ heading, members }, index) => (
             <div key={index} className="flex flex-col gap-4 w-full text-black">
               <h2 className="font-semibold text-3xl">{heading}</h2>
               <div className="flex flex-wrap gap-3 w-full">
@@ -517,6 +376,7 @@ export const CareerConnect = () => {
           <img src={AboutImage} alt="about" className="w-full" />
         </div>
       </div>
+      {/* footer */}
       <footer className="bg-custom-maroom-dark flex flex-col gap-6 text-white p-14">
         <div className="flex items-center justify-between w-full">
           <div className="flex flex-col gap-8">
@@ -536,14 +396,7 @@ export const CareerConnect = () => {
             </div>
           </div>
           <div className="flex flex-col gap-5">
-            {[
-              "Home",
-              "About",
-              "Companies",
-              "Students",
-              "Schedule",
-              "Sponsors",
-            ].map((item, index) => (
+            {navItems.map((item, index) => (
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
@@ -557,7 +410,7 @@ export const CareerConnect = () => {
         <hr className="border-2 border-white" />
         <div className="flex items-center justify-between w-full">
           <h1 className="text-base font-semibold">
-            © 2024 Career Connect | All Rights Reserved.
+            &copy; 2024 Career Connect | All Rights Reserved.
           </h1>
           <div className="flex items-center gap-2">
             {[Facebook, Instagram].map((icon, index) => (

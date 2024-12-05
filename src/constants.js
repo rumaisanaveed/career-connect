@@ -3,6 +3,165 @@ import Gold from "./assets/icons/gold.svg";
 import Silver from "./assets/icons/silver.svg";
 import Bronze from "./assets/icons/bronze.svg";
 
+export const aboutData = [
+  "Keynote speeches and TED Talks",
+  "Panel discussions on Blockchain, Web3, and Game Development",
+  "Digital and tech stalls showcasing innovations",
+  "Recruitment drives and walk-in interviews",
+  "Coding hackathons and gaming competitions",
+  "Networking sessions with professionals, alumni, and sponsors",
+];
+
+export const teamData = [
+  {
+    heading: "Faculty Advisors",
+    members: [
+      {
+        name: "Prof. Sadiq Ali Khan",
+        desgination: "Head of Department",
+        description: "Guiding the vision and execution of Career Connect 2024.",
+      },
+      {
+        name: "Dr. S. M. Khalid Jamal",
+        desgination: "Student Advisor",
+        description:
+          "Ensuring seamless collaboration between academia and industry.",
+      },
+      {
+        name: "Dr. Humera Basheer",
+        desgination: "Student Advisor",
+        description:
+          "Ensuring seamless collaboration between academia and industry.",
+      },
+    ],
+  },
+  {
+    heading: "Core Organizing Committee",
+    members: [
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+    ],
+  },
+  {
+    heading: "Volunteer Team",
+    members: [
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+      {
+        name: "Name",
+        desgination: "Designation",
+        description: "Sample text",
+      },
+    ],
+  },
+];
+
+export const companiesData = [
+  {
+    name: "Platinum",
+    companies: {
+      image1: "",
+      image2: "",
+    },
+  },
+  {
+    name: "Gold",
+    companies: {
+      image1: "",
+      image2: "",
+      image3: "",
+      image4: "",
+      image5: "",
+    },
+  },
+  {
+    name: "Silver",
+    companies: {
+      image1: "",
+      image2: "",
+      image3: "",
+      image4: "",
+      image5: "",
+      image6: "",
+      image7: "",
+      image8: "",
+    },
+  },
+  {
+    name: "Bronze",
+    companies: {
+      image1: "",
+      image2: "",
+      image3: "",
+      image4: "",
+      image5: "",
+      image6: "",
+      image7: "",
+      image8: "",
+    },
+  },
+];
+
+export const navItems = [
+  "Home",
+  "About",
+  "Companies",
+  "Team",
+  "Schedule",
+  "Sponsors",
+];
+
 export const sponsorData = [
   {
     heading: "PLATINUM SPONSOR",
