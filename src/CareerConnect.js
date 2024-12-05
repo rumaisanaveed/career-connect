@@ -8,6 +8,7 @@ import { Button } from "./components/Button";
 import {
   aboutData,
   companiesData,
+  mobileNavItems,
   navItems,
   sponsorData,
   teamData,
@@ -15,6 +16,7 @@ import {
 import Facebook from "./assets/icons/facebook.svg";
 import Instagram from "./assets/icons/instagram.svg";
 import useScreenSize from "./hooks/useScreenSize";
+import HamBurger from "./assets/icons/hamBurger.svg";
 
 export const CareerConnect = () => {
   const [countdown, setCountdown] = useState({
@@ -90,7 +92,7 @@ export const CareerConnect = () => {
           </div>
         )}
         <img
-          src={Calendar}
+          src={HamBurger}
           alt="hamburger"
           onClick={handleHamBurgerClick}
           className="cursor-pointer lg:hidden"
@@ -98,19 +100,19 @@ export const CareerConnect = () => {
         {isSmallDesktop && <Button to="#contact">Contact</Button>}
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-20 flex flex-col items-center justify-center">
+          <div className="fixed top-0 left-0 w-full h-full bg-custom-maroom-dark z-20 flex flex-col items-center justify-center">
             <button
               onClick={handleHamBurgerClick}
               className="absolute top-6 right-6 text-white text-3xl"
             >
               &times;
             </button>
-            {navItems.map((item, index) => (
+            {mobileNavItems.map((item, index) => (
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
                 className="text-white font-medium text-lg my-4"
-                onClick={handleHamBurgerClick} // Close menu on link click
+                onClick={handleHamBurgerClick}
               >
                 {item}
               </a>
@@ -419,7 +421,7 @@ export const CareerConnect = () => {
       </div>
       {/* footer */}
       <footer className="bg-custom-maroom-dark flex flex-col gap-6 text-white p-14">
-        <div className="flex flex-col-reverse gap-5 md:flex-row items-center justify-between w-full">
+        <div className="flex flex-col gap-5 md:flex-row items-center justify-between w-full">
           <div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left">
             <div>
               <img src={Logo} alt="logo" />

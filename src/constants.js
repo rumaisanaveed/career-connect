@@ -162,6 +162,16 @@ export const navItems = [
   "Sponsors",
 ];
 
+export const mobileNavItems = [
+  "Home",
+  "About",
+  "Companies",
+  "Team",
+  "Schedule",
+  "Sponsors",
+  "Contact",
+];
+
 export const sponsorData = [
   {
     heading: "PLATINUM SPONSOR",
