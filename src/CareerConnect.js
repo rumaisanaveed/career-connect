@@ -14,6 +14,7 @@ import {
 } from "./constants";
 import Facebook from "./assets/icons/facebook.svg";
 import Instagram from "./assets/icons/instagram.svg";
+import useScreenSize from "./hooks/useScreenSize";
 
 export const CareerConnect = () => {
   const [countdown, setCountdown] = useState({
@@ -56,6 +57,14 @@ export const CareerConnect = () => {
     };
   }, []);
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleHamBurgerClick = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const { isSmallDesktop } = useScreenSize();
+
   return (
     <div>
       <nav
@@ -67,18 +76,47 @@ export const CareerConnect = () => {
         <div>
           <img src={Logo} alt="logo" />
         </div>
-        <div className="flex items-center gap-8">
-          {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={`#${item.toLowerCase()}`}
-              className="text-white font-medium text-sm"
+        {isSmallDesktop && (
+          <div className="flex items-center gap-8">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="text-white font-medium text-sm"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        )}
+        <img
+          src={Calendar}
+          alt="hamburger"
+          onClick={handleHamBurgerClick}
+          className="cursor-pointer lg:hidden"
+        />
+        {isSmallDesktop && <Button to="#contact">Contact</Button>}
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-20 flex flex-col items-center justify-center">
+            <button
+              onClick={handleHamBurgerClick}
+              className="absolute top-6 right-6 text-white text-3xl"
             >
-              {item}
-            </a>
-          ))}
-        </div>
-        <Button to="#contact">Contact</Button>
+              &times;
+            </button>
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="text-white font-medium text-lg my-4"
+                onClick={handleHamBurgerClick} // Close menu on link click
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        )}
       </nav>
       {/* hero */}
       <div
@@ -101,14 +139,14 @@ export const CareerConnect = () => {
           }}
         >
           <div className="flex flex-col items-center gap-4">
-            <h1 className="text-6xl font-bold text-custom-orange max-w-4xl mx-auto">
+            <h1 className="md:text-6xl text-4xl font-bold text-custom-orange max-w-4xl mx-auto">
               Where Ambitions Meet Opportunities
             </h1>
-            <h2 className="text-white font-medium text-base max-w-2xl mx-auto">
+            <h2 className="text-white font-medium text-base max-w-sm md:max-w-2xl mx-auto">
               Join us for an immersive experience connecting students,
               professionals, and top companies to redefine career prospects.
             </h2>
-            <div className="text-white text-base font-medium flex items-center gap-2">
+            <div className="text-white text-base font-medium flex flex-col md:flex-row items-center gap-2">
               {[
                 {
                   icon: Calendar,
@@ -135,7 +173,7 @@ export const CareerConnect = () => {
         </article>
       </div>
       {/* timer */}
-      <div className="flex justify-center gap-28 w-full py-5 bg-custom-orange text-center text-custom-maroom-dark">
+      <div className="flex justify-center gap-5 md:gap-28 w-full py-5 bg-custom-orange text-center text-custom-maroom-dark">
         {Object.entries(countdown).map(([key, value]) => (
           <div className="text-center text-custom-maroom-dark" key={key}>
             <p className="text-[64px] leading-none font-bold">{value}</p>
@@ -146,7 +184,7 @@ export const CareerConnect = () => {
         ))}
       </div>
       {/* about */}
-      <div id="about" className="flex items-center w-full">
+      <div id="about" className="flex flex-col md:flex-row items-center w-full">
         <div className="w-full p-10 flex flex-col gap-4">
           <h1 className="text-custom-maroom-dark font-bold text-5xl max-w-sm mr-auto">
             About Career Connect 2024
@@ -193,7 +231,7 @@ export const CareerConnect = () => {
           {companiesData.map(({ name, companies }, index) => (
             <div key={index}>
               <h2 className="text-black font-semibold text-[32px]">{name}</h2>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap md:flex-nowrap items-center gap-2">
                 {Object.entries(companies).map(([key, value]) => (
                   <div
                     key={`${index}-${key}`}
@@ -257,7 +295,7 @@ export const CareerConnect = () => {
             industry, fostering innovation and growth.
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-y-10 gap-x-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-y-10 gap-x-8">
           {sponsorData.map((item, index) => (
             <div
               className="border-2 border-black rounded-[50px] py-5 px-10 relative"
@@ -310,7 +348,10 @@ export const CareerConnect = () => {
         </div>
       </div>
       {/* contact */}
-      <div id="contact" className="flex items-center w-full">
+      <div
+        id="contact"
+        className="flex flex-col md:flex-row items-center w-full"
+      >
         <div className="flex flex-col gap-3 w-full p-10">
           <div className="w-full flex flex-col gap-4">
             <h1 className="text-custom-maroom-dark font-bold text-5xl max-w-sm mr-auto">
@@ -378,8 +419,8 @@ export const CareerConnect = () => {
       </div>
       {/* footer */}
       <footer className="bg-custom-maroom-dark flex flex-col gap-6 text-white p-14">
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col gap-8">
+        <div className="flex flex-col-reverse gap-5 md:flex-row items-center justify-between w-full">
+          <div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left">
             <div>
               <img src={Logo} alt="logo" />
             </div>
@@ -395,7 +436,7 @@ export const CareerConnect = () => {
               <p className="text-sm font-normal">+92 XXX XXXXX</p>
             </div>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 items-center md:items-start">
             {navItems.map((item, index) => (
               <a
                 key={index}
@@ -408,7 +449,7 @@ export const CareerConnect = () => {
           </div>
         </div>
         <hr className="border-2 border-white" />
-        <div className="flex items-center justify-between w-full">
+        <div className="flex flex-col md:flex-row text-center gap-3 md:gap-0 items-center justify-between w-full">
           <h1 className="text-base font-semibold">
             &copy; 2024 Career Connect | All Rights Reserved.
           </h1>
