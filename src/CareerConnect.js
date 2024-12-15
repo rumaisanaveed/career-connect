@@ -14,7 +14,7 @@ import {
   teamData,
 } from "./constants";
 import Facebook from "./assets/icons/facebook.svg";
-import Instagram from "./assets/icons/instagram.svg";
+import Linkedin from "./assets/icons/linkedIn.svg";
 import useScreenSize from "./hooks/useScreenSize";
 import HamBurger from "./assets/icons/hamBurger.svg";
 
@@ -75,9 +75,9 @@ export const CareerConnect = () => {
           backgroundColor: isScrolled ? "#9A0F19" : "transparent",
         }}
       >
-        <div>
+        <a href="#home">
           <img src={Logo} alt="logo" />
-        </div>
+        </a>
         {isSmallDesktop && (
           <div className="flex items-center gap-8">
             {navItems.map((item, index) => (
@@ -168,7 +168,10 @@ export const CareerConnect = () => {
           </div>
           <div className="flex items-center gap-3">
             <Button>Register Now</Button>
-            <Button className="bg-inherit border-2 border-white text-white py-[10px]">
+            <Button
+              to="#contact"
+              className="bg-inherit border-2 border-white text-white py-[10px]"
+            >
               Contact Us
             </Button>
           </div>
@@ -233,50 +236,14 @@ export const CareerConnect = () => {
           {companiesData.map(({ name, companies }, index) => (
             <div key={index}>
               <h2 className="text-black font-semibold text-[32px]">{name}</h2>
-              <div className="flex flex-wrap md:flex-nowrap items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {Object.entries(companies).map(([key, value]) => (
-                  <div
-                    key={`${index}-${key}`}
-                    className="bg-[#D9D9D9] h-32 w-32"
-                  ></div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* team */}
-      <div id="team" className="p-10 flex flex-col gap-8">
-        <div className="flex flex-col gap-3">
-          <h1 className="text-custom-maroom-dark font-bold text-5xl">
-            Meet Our Team
-          </h1>
-          <p className="text-black font-medium text-lg max-w-5xl mr-auto">
-            The driving force behind Career Connect 2024 is a dedicated team of
-            passionate individuals committed to making this event a grand
-            success. Meet the people working tirelessly to connect aspirations
-            with opportunities.
-          </p>
-        </div>
-        <div className="flex flex-col gap-6">
-          <h1 className="font-bold text-4xl">Team Structure</h1>
-          {teamData.map(({ heading, members }, index) => (
-            <div key={index} className="flex flex-col gap-4 w-full text-black">
-              <h2 className="font-semibold text-3xl">{heading}</h2>
-              <div className="flex flex-wrap gap-3 w-full">
-                {members.map((member, index) => (
-                  <div
-                    key={`${index}-${index}`}
-                    className="flex flex-col gap-1"
-                  >
-                    <div className="bg-[#D9D9D9] h-[240px] w-[240px]"></div>
-                    <h3 className="text-xl font-semibold">{member.name}</h3>
-                    <p className="text-base font-medium">
-                      {member.desgination}
-                    </p>
-                    <p className="text-sm font-normal max-w-52 mr-auto">
-                      {member.description}
-                    </p>
+                  <div key={`${index}-${key}`}>
+                    <img
+                      src={value}
+                      alt={`${key}-${value}`}
+                      className="w-[180px] h-[180px] object-cover top-0"
+                    />
                   </div>
                 ))}
               </div>
@@ -320,9 +287,6 @@ export const CareerConnect = () => {
                 <p className="font-semibold text-2xl">
                   {item.detailedDescription}
                 </p>
-                <h2 className="italic font-bold text-[30px]">
-                  Investment : {item.investment}
-                </h2>
                 {Object.entries(item.bulletPoints).map(([key, value]) => (
                   <li
                     key={`${index}-${key}`}
@@ -336,8 +300,50 @@ export const CareerConnect = () => {
           ))}
         </div>
       </div>
+      {/* team */}
+      <div id="team" className="p-10 flex flex-col gap-8">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-custom-maroom-dark font-bold text-5xl">
+            Meet Our Team
+          </h1>
+          <p className="text-black font-medium text-lg max-w-5xl mr-auto">
+            The driving force behind Career Connect 2024 is a dedicated team of
+            passionate individuals committed to making this event a grand
+            success. Meet the people working tirelessly to connect aspirations
+            with opportunities.
+          </p>
+        </div>
+        <div className="flex flex-col gap-6">
+          <h1 className="font-bold text-4xl">Team Structure</h1>
+          {teamData.map(({ heading, members }, index) => (
+            <div key={index} className="flex flex-col gap-4 w-full text-black">
+              <h2 className="font-semibold text-3xl">{heading}</h2>
+              <div className="flex flex-wrap gap-3 w-full">
+                {members.map((member, index) => (
+                  <div
+                    key={`${index}-${index}`}
+                    className="flex flex-col gap-1"
+                  >
+                    <div>
+                      <img
+                        className="w-[240px] h-[240px] object-cover top-0"
+                        src={member.image}
+                        alt={`member-${index}`}
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                    <p className="text-base font-medium">
+                      {member.desgination}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* event schedule */}
-      <div id="schedule" className="">
+      {/* <div id="schedule" className="">
         <div className="flex flex-col gap-3 p-10">
           <h1 className="text-custom-maroom-dark font-bold text-5xl">
             Event Schedule
@@ -348,7 +354,7 @@ export const CareerConnect = () => {
             participation to make the most of this exciting opportunity.
           </p>
         </div>
-      </div>
+      </div> */}
       {/* contact */}
       <div
         id="contact"
@@ -423,9 +429,10 @@ export const CareerConnect = () => {
       <footer className="bg-custom-maroom-dark flex flex-col gap-6 text-white p-14">
         <div className="flex flex-col gap-5 md:flex-row items-center justify-between w-full">
           <div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left">
-            <div>
+            <a href="#home">
               <img src={Logo} alt="logo" />
-            </div>
+            </a>
+
             <div>
               <h1 className="text-base font-semibold">Address:</h1>
               <p className="text-sm font-normal max-w-sm mr-auto">
@@ -456,8 +463,19 @@ export const CareerConnect = () => {
             &copy; 2024 Career Connect | All Rights Reserved.
           </h1>
           <div className="flex items-center gap-2">
-            {[Facebook, Instagram].map((icon, index) => (
-              <img src={icon} key={index} alt={`icon-${index}`} />
+            {[
+              {
+                link: "https://www.facebook.com/KUDCSUBIT",
+                icon: Facebook,
+              },
+              {
+                link: "https://www.linkedin.com/company/kudcs-ubit-official/",
+                icon: Linkedin,
+              },
+            ].map((item, index) => (
+              <a href={`${item.link}`} target="_blank">
+                <img src={item.icon} key={index} alt={`icon-${index}`} />
+              </a>
             ))}
           </div>
         </div>

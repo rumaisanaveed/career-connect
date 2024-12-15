@@ -2,6 +2,33 @@ import Platinum from "./assets/icons/platinum.svg";
 import Gold from "./assets/icons/gold.svg";
 import Silver from "./assets/icons/silver.svg";
 import Bronze from "./assets/icons/bronze.svg";
+import FacultyOne from "./assets/images/sirSadiq.jpeg";
+import FacultyTwo from "./assets/images/sirKhalid.jpeg";
+import Rumaisa from "./assets/images/rumaisa.jpg";
+import Faiza from "./assets/images/faiza.jpg";
+import Ayema from "./assets/images/ayema.jpg";
+import Wasay from "./assets/images/wasay.jpeg";
+import Badar from "./assets/images/badar.jpg";
+import Anas from "./assets/images/anas.jpg";
+import Ali from "./assets/images/ali.jpg";
+import Sulafa from "./assets/images/sulafa.jpeg";
+import Ubl from "./assets/images/ubl.jpg";
+import OctDaily from "./assets/images/octDaily.jpg";
+import ESpark from "./assets/images/eSpark.jpg";
+import Shahnawaz from "./assets/images/shahnawaz.jpg";
+import Convex from "./assets/images/convex.jpg";
+import Meezan from "./assets/images/meezan.jpg";
+import Avialdo from "./assets/images/avialdo.jpg";
+import Discourtify from "./assets/images/discourtify.jpg";
+import Codesy from "./assets/images/codesy.jpg";
+import Habib from "./assets/images/habib.jpg";
+import Impetus from "./assets/images/impetus.jpg";
+import Jin from "./assets/images/jin.jpg";
+import SoftCom from "./assets/images/softcom.jpg";
+import Koderlabs from "./assets/images/koderlabs.jpg";
+import Qavi from "./assets/images/qavi.jpg";
+import Softech from "./assets/images/softech.jpg";
+import Keenu from "./assets/images/keenu.jpg";
 
 export const aboutData = [
   "Keynote speeches and TED Talks",
@@ -20,18 +47,21 @@ export const teamData = [
         name: "Prof. Sadiq Ali Khan",
         desgination: "Head of Department",
         description: "Guiding the vision and execution of Career Connect 2024.",
+        image: FacultyOne,
       },
       {
         name: "Dr. S. M. Khalid Jamal",
         desgination: "Student Advisor",
         description:
           "Ensuring seamless collaboration between academia and industry.",
+        image: FacultyTwo,
       },
       {
-        name: "Dr. Humera Basheer",
+        name: "Dr. Humera Azam",
         desgination: "Student Advisor",
         description:
           "Ensuring seamless collaboration between academia and industry.",
+        image: Sulafa,
       },
     ],
   },
@@ -39,69 +69,45 @@ export const teamData = [
     heading: "Core Organizing Committee",
     members: [
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Anas Naeem",
+        desgination: "Management Lead",
+        image: Anas,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Ali Hyder",
+        desgination: "Management Lead",
+        image: Ali,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Muhammad Wasay",
+        desgination: "",
+        image: Wasay,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Badar",
+        desgination: "Social Media Lead",
+        image: Badar,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Aaima Faisal",
+        desgination: "Graphics Lead",
+        image: Ayema,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Faiza Kashaf",
+        desgination: "Out Reach Lead",
+        image: Faiza,
       },
-    ],
-  },
-  {
-    heading: "Volunteer Team",
-    members: [
+
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Rumaisa Naved",
+        desgination: "Website Lead",
+        image: Rumaisa,
       },
       {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
-      },
-      {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
-      },
-      {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
-      },
-      {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
-      },
-      {
-        name: "Name",
-        desgination: "Designation",
-        description: "Sample text",
+        name: "Sulafa Ranta",
+        desgination: "Event Coverage Lead",
+        image: Sulafa,
       },
     ],
   },
@@ -111,44 +117,43 @@ export const companiesData = [
   {
     name: "Platinum",
     companies: {
-      image1: "",
-      image2: "",
+      image1: Ubl,
+      image2: OctDaily,
     },
   },
-  {
-    name: "Gold",
-    companies: {
-      image1: "",
-      image2: "",
-      image3: "",
-      image4: "",
-      image5: "",
-    },
-  },
+  // {
+  //   name: "Gold",
+  //   companies: {
+  //     image1: "",
+  //     image2: "",
+  //     image3: "",
+  //     image4: "",
+  //     image5: "",
+  //   },
+  // },
   {
     name: "Silver",
     companies: {
-      image1: "",
-      image2: "",
-      image3: "",
-      image4: "",
-      image5: "",
-      image6: "",
-      image7: "",
-      image8: "",
+      image1: ESpark,
+      image2: Shahnawaz,
+      image3: Convex,
+      image4: Meezan,
     },
   },
   {
     name: "Bronze",
     companies: {
-      image1: "",
-      image2: "",
-      image3: "",
-      image4: "",
-      image5: "",
-      image6: "",
-      image7: "",
-      image8: "",
+      image1: Avialdo,
+      image2: Discourtify,
+      image3: Codesy,
+      image4: Habib,
+      image5: Impetus,
+      image6: Jin,
+      image7: Keenu,
+      image8: SoftCom,
+      image9: Koderlabs,
+      image10: Qavi,
+      image11: Softech,
     },
   },
 ];
@@ -157,18 +162,18 @@ export const navItems = [
   "Home",
   "About",
   "Companies",
-  "Team",
-  "Schedule",
   "Sponsors",
+  "Team",
+  // "Schedule",
 ];
 
 export const mobileNavItems = [
   "Home",
   "About",
   "Companies",
-  "Team",
-  "Schedule",
   "Sponsors",
+  "Team",
+  // "Schedule",
   "Contact",
 ];
 
@@ -178,7 +183,6 @@ export const sponsorData = [
     headingColor: "#1D5454",
     icon: Platinum,
     detailedDescription: "EXCLUSIVE PARTNER STATUS",
-    investment: "980,000 PKR",
     bulletPoints: {
       point1: "Marketing on the Event Website and Social Media Platforms",
       point2: "Exclusive Recruitment Privileges",
@@ -190,7 +194,7 @@ export const sponsorData = [
       point7: "Exclusive Event Partner Status",
       point8: "7 Alumni Dinner passes",
       point9: "Panelist participation and Stage time",
-      point10: "Workshop / Seminar Privileges and much more",
+      point10: "10 Guest members invited",
     },
   },
   {
@@ -198,28 +202,23 @@ export const sponsorData = [
     headingColor: "#FFAE52",
     icon: Gold,
     detailedDescription: "EXCLUSIVE MODULE PARTNER STATUS",
-    investment: "720,000 PKR",
     bulletPoints: {
       point1: "Marketing on the Event Website and Social Media Platforms ",
-      point2:
-        "Host a breakout session or a workshop with potential candidates.",
       point3:
         "Logo Placement on Team Merchandise, Posters, Brochures & Dinner.",
       point4: "On-Ground Promotions (3 Standees + 1 Electronic Standee)",
       point5: "Personalized posts & stories on all socials",
       point6: "Ample Stall Size Setup (20 x 10)",
-      point7: "Premium visibility, featured  on all awards",
       point8: "5 Alumni Dinner passes",
       point9: "Panelist participation and Stage time",
-      point10: "Workshop / Seminar Privileges",
+      point10: "6 Guest members invited",
     },
   },
   {
     heading: "SILVER SPONSOR",
     headingColor: "#8E8E8E",
     icon: Silver,
-    detailedDescription: "EXCLUSIVE MODULE PARTNER STATUS",
-    investment: "250,000 PKR",
+    detailedDescription: "",
     bulletPoints: {
       point1: "Mention on the Event Website and Social Media Platforms",
       point2: "Logo Placement on Team Merchandise and Posters.",
@@ -227,19 +226,19 @@ export const sponsorData = [
       point4: "3 Alumni Dinner passes",
       point5: "Inclusion in event emails sent to participants.",
       point6: "Adequate Stall Size (10 x 10)",
-      point7: "Workshop / Seminar Privileges",
+      point7: "4 Guest members invited",
     },
   },
   {
     heading: "BRONZE SPONSOR",
     headingColor: "#C79B5E",
     icon: Bronze,
-    detailedDescription: "EXCLUSIVE MODULE PARTNER STATUS",
-    investment: "70,000 PKR",
+    detailedDescription: "",
     bulletPoints: {
       point1: "Mention on the Event Website and Social Media Platforms",
       point2: "On-Ground Promotions (1 Standee Included) ",
       point3: "Adequate Stall Size (10 x 10)",
+      point4: "2 Guest members invited",
     },
   },
 ];
