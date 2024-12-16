@@ -29,6 +29,8 @@ import Koderlabs from "./assets/images/koderlabs.jpg";
 import Qavi from "./assets/images/qavi.jpg";
 import Softech from "./assets/images/softech.jpg";
 import Keenu from "./assets/images/keenu.jpg";
+import MissHumera from "./assets/images/missHumera.jpeg";
+import Hammad from "./assets/images/hammad.jpeg";
 
 export const aboutData = [
   "Keynote speeches and TED Talks",
@@ -61,7 +63,7 @@ export const teamData = [
         desgination: "Student Advisor",
         description:
           "Ensuring seamless collaboration between academia and industry.",
-        image: Sulafa,
+        image: MissHumera,
       },
     ],
   },
@@ -80,8 +82,13 @@ export const teamData = [
       },
       {
         name: "Muhammad Wasay",
-        desgination: "",
+        desgination: "Event Session Lead",
         image: Wasay,
+      },
+      {
+        name: "Hammad Hussain",
+        desgination: "Management Lead",
+        image: Hammad,
       },
       {
         name: "Badar",
@@ -98,7 +105,6 @@ export const teamData = [
         desgination: "Out Reach Lead",
         image: Faiza,
       },
-
       {
         name: "Rumaisa Naved",
         desgination: "Website Lead",
