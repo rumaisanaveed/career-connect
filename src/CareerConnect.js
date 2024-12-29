@@ -177,17 +177,6 @@ export const CareerConnect = () => {
           </div>
         </article>
       </div>
-      {/* timer */}
-      <div className="flex justify-center gap-5 md:gap-28 w-full py-5 bg-custom-orange text-center text-custom-maroom-dark">
-        {Object.entries(countdown).map(([key, value]) => (
-          <div className="text-center text-custom-maroom-dark" key={key}>
-            <p className="text-[64px] leading-none font-bold">{value}</p>
-            <p className="font-semibold text-xl">
-              {key[0].toUpperCase() + key.substring(1, key.length)}
-            </p>
-          </div>
-        ))}
-      </div>
       {/* about */}
       <div id="about" className="flex flex-col md:flex-row items-center w-full">
         <div className="w-full p-10 flex flex-col gap-4">
