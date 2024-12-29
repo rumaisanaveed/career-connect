@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Career Connect Website 🌟
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This website was built for our university's flagship event, **"Career Connect,"** aimed at bridging the gap between students and leading companies. The platform serves as a virtual hub to showcase event highlights, participating companies, sponsors, and our dedicated team, creating an engaging and interactive experience for all stakeholders. 
 
-## Available Scripts
+The project emphasizes clean design, seamless user experience, and reusable code to make future updates effortless. 
 
-In the project directory, you can run:
+## Tech Stack
+The project leverages the following tools and technologies to ensure a high-quality and scalable solution:
+- **React.js**: For building the dynamic and interactive user interface.
+- **Tailwind CSS**: For crafting modern, responsive, and aesthetically pleasing designs.
+- **Figma**: For translating high-fidelity UI/UX designs into functional code.
+- **JavaScript**: For dynamic interactivity and logic implementation.
 
-### `npm start`
+## Reusable Components
+The website is built with modular and reusable components to enhance maintainability and scalability. Examples include:
+- **Header**: A common navigation bar used across all pages.
+- **Cards**: Uniform styling for displaying information about companies, sponsors, and team members.
+- **Footer**: Consistent footer design with event and contact details.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Sections
+The website features the following key sections:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Home**: A welcoming landing page with event highlights and call-to-action buttons.
+2. **About**: Detailed information about the Career Connect event and its purpose.
+3. **Companies**: A showcase of participating companies and their opportunities.
+4. **Sponsors**: A tribute to the event sponsors who made this initiative possible.
+5. **Team**: A section introducing the dedicated team behind the event.
 
-### `npm test`
+## The Process
+I was provided with a comprehensive Figma design file, and my role was to transform the design into a fully functional, responsive website. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps in the process:
+1. **Analyzing the Design**: Carefully studied the Figma file to understand design patterns and layout structure.
+2. **Setting Up the Project**: Created a React project and configured Tailwind CSS for styling.
+3. **Coding the Components**: Developed reusable components to maintain consistency across sections.
+4. **Testing and Refinements**: Ensured responsiveness and cross-browser compatibility for an optimal user experience.
 
-### `npm run build`
+## Running the Project
+Follow these steps to run the project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/repo-name.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd repo-name
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open the application in your browser:
+   ```bash
+   http://localhost:3000
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Video
+🎥 Watch the demo of the Career Connect website here: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://github.com/user-attachments/assets/bdef94b4-5d97-4db5-886b-8731260f9827
